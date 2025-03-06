@@ -4,7 +4,7 @@ import { useState } from "react"
 import { ShoppingBasketIcon as Basketball, GlobeIcon as GolfBall, Cat } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export default function MyV0Component() {
+function MyV0Component() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const items = [
@@ -109,4 +109,7 @@ export default function MyV0Component() {
     </div>
   )
 }
+
+export default MyV0Component
+export { MyV0Component }
 
