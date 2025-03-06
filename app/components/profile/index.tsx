@@ -13,7 +13,7 @@ import {
   PullRequestIcon,
   VercelLogo,
 } from "../symbols";
-import {MyV0Component} from "./my-V0-component";
+import {MyV0Component} from "./my-v0-component";
 import {handleDate} from "@/lib/utils";
 
 export async function Profile({
