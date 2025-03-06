@@ -4,7 +4,8 @@ import { useState } from "react"
 import { ShoppingBasketIcon as Basketball, GlobeIcon as GolfBall, Cat } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export default function MyV0Component() {
+// Create the component function
+function MyV0Component() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   const items = [
@@ -109,3 +110,8 @@ export default function MyV0Component() {
     </div>
   )
 }
+
+// Export as both default and named export
+export default MyV0Component
+export { MyV0Component }
+
