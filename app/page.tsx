@@ -4,7 +4,7 @@ import { EmptyState } from "./components/empty-state"
 import { NotFound } from "./components/not-found"
 import { Profile } from "./components/profile"
 import { getGithubProfile } from "./lib/get-github-profile"
-import MyV0Component from "./components/my-v0-component"
+import { MyV0Component } from "./components/my-v0-component"
 
 const yourGithubUsername = "Slkim-Chee"
 
