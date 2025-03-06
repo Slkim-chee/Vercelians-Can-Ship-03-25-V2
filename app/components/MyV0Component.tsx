@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
 import { ShoppingBasketIcon as Basketball, GlobeIcon as GolfBall, Cat } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -43,21 +42,19 @@ export default function MyV0Component() {
 
       <div className="relative h-64 w-full overflow-hidden rounded-lg">
         {items.map((item, index) => (
-          <motion.div
+          <div
             key={item.title}
-            className={`absolute inset-0 flex flex-col items-center justify-center p-6 ${item.color} rounded-lg`}
-            initial={{ opacity: 0, x: index > activeIndex ? 100 : -100 }}
-            animate={{
+            className={`absolute inset-0 flex flex-col items-center justify-center p-6 ${item.color} rounded-lg transition-all duration-500 ease-in-out`}
+            style={{
               opacity: index === activeIndex ? 1 : 0,
-              x: index === activeIndex ? 0 : index > activeIndex ? 100 : -100,
-              scale: index === activeIndex ? 1 : 0.8,
+              transform: `translateX(${index === activeIndex ? 0 : index > activeIndex ? 100 : -100}px) scale(${index === activeIndex ? 1 : 0.8})`,
+              zIndex: index === activeIndex ? 10 : 0,
             }}
-            transition={{ duration: 0.5 }}
           >
             <div className="mb-4">{item.icon}</div>
             <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
             <p className="text-center text-muted-foreground">{item.description}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
